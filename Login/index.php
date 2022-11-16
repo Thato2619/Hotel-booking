@@ -17,7 +17,7 @@
             <label>Email: </label>
             <input type="email" name="email" placeholder="Email address" required> <br>
             <label>Password</label>
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required> <br>
 
             <button type="submit">LOGIN</button>
     </form>
