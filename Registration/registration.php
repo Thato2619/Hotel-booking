@@ -1,3 +1,8 @@
+<?php 
+require_once('./config.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,14 +32,44 @@
         $password = mysqli_real_escape_string($con, 'password');
         $password = stripslashes($_REQUEST['password']);
         #insert all the request values in database using query(variable)
-        $query = INSERT INTO `Registration` (name, surname, age, phone, email, password) VALUES ('name', 'surname', 'age', 'phone', 'email', 'password');
+        $query = "INSERT INTO `Registration` (name, surname, age, phone, email, password) VALUES ('name', 'surname', 'age', 'phone', 'email', 'password')";
 
         $result = mysqli_query($con, $query);
-        
 
+        if($result) {
+            echo "<div class= 'form'>
+            <h3>You are registered successfully</h3> <br>
+            <p class= 'link'>Click here to <a href= './Login/login.php'>Login</a></p>
+            </div>";
+        }
+        else{
+            echo "<div class= 'form'>
+            <h3>Please fill in the required fields</h3> <br>
+            <p class= 'link'>Click here to <a href= './Registration/registration.php'>Login</a></p>
+            </div>"; 
+        }
+    } else {
+?>
+<form class="form" action="" method="post">
+    <h1>Registration</h1>
+    <label>Name: </label>
+    <input type="name" name="name" placeholder="name" required> <br>
+    <label>Surname: </label>
+    <input type="surname" name="surname" placeholder="surname" required> <br>
+    <label>Age: </label>
+    <input type="age" name="age" placeholder="age" required> <br>
+    <label>Phone: </label>
+    <input type="phone" name="phone" placeholder="phone" required> <br>
+    <label>Email: </label>
+    <input type="email" name="email" placeholder="Email address" required> <br>
+    <label>password: </label>
+    <input type="password" name="password" placeholder="password" required> <br>
+
+</form>
+<?php
     }
 
-    
     ?>
 </body>
 </html>
+ 
