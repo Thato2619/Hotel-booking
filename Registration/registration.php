@@ -27,7 +27,10 @@
         $password = mysqli_real_escape_string($con, 'password');
         $password = stripslashes($_REQUEST['password']);
         #insert all the request values in database using query(variable)
-        $query = INSERT into `Registration`(name, surname, age, phone, email, password) VALUES ()
+        $query = INSERT INTO `Registration` (name, surname, age, phone, email, password) VALUES ('name', 'surname', 'age', 'phone', 'email', 'password');
+
+        $result = mysqli_query($con, $query);
+        
 
     }
 
