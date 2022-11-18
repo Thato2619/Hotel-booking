@@ -12,8 +12,15 @@ class Connection{
     public $db_name = "Users";
     public $conn;
 
-    public function __construct() {
-        $this->conn = mysqli_connect($this->host, $this->Name, $this->Surname, $this->Age, $this->phone, $this->Email, $this->password, $this->db_name);
+    public function __construct($host, $Name, $Surname, $Age, $phone, $Email, $password, $db_name){
+            $this->host = $host;
+            $this->Name = $Name;
+            $this->Surname = $Surname;
+            $this->Age = $Age;
+            $this->host = $host;
+            $this->host = $host;
+            $this->host = $host;
+            $this->host = $host;
+
+        };
     }
-}
-?>
