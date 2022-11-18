@@ -4,7 +4,7 @@ session_start();
 include "db_connection.php";
 
 #validate form by if statement
-if(isset($_POST['name']) && isset($_POST['surname'] && isset($_POST['age'] && isset($_POST['phone'] && isset($_POST['email'] && isset($_POST['password'])))))) {
+if((isset($_POST['name'])) && ($_POST['surname'] && ($_POST['age'] && ($_POST['phone'] && ($_POST['email'] && ($_POST['password'])))))) {
     
     function validate($data) {
         $data = trim($data);
@@ -27,16 +27,28 @@ if(empty($email)) {
 else if(empty($password)) {
     header("Location: index.php?erro=User Password is required");
 }
+else if(empty($name)) {
+    header("Location: index.php?erro=User name is required");
+}
+else if(empty($surname)) {
+    header("Location: index.php?erro=User surname is required");
+}
+else if (empty($age)) {
+    header("Location: index.php?erro=User age is required");
+}
+else if (empty($phone)) {
+    header("Location: index.php?erro=User phone is required");
+}
 
-$sql = "SELECT * FROM Login WHERE Email= 'email' AND Password='password'";
+$sql = "SELECT * FROM Users WHERE Email= 'email' AND Password='password'";
 
 $results = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($results) === 1 ) {
     $row = mysqli_fetch_assoc($results);
-    if($row['Email'] === 'email' && $row['password'] === 'password'){
-        echo "Logged In!!";
-        $_SESSION['Login_id'] = $row['id'];
+    if($row['Name'] === 'name' && $row['Surname'] === 'surname' && $row['Age'] === 'age' && $row['Phone'] === 'phone' && $row['Email'] === 'email' && $row['Password'] === 'password'){
+        echo "You have successfully signed in !!";
+        $_SESSION['Registration_id'] = $row['id'];
         $_SESSION['Email'] = $row['Email'];
         $_SESSION['Password'] = $row['password'];
         header("Location: homePage.php");
