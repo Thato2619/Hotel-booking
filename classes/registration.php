@@ -8,6 +8,7 @@ class Registration{
     private $email;
     private $password;
 
+    #add constructor
     public function __construct($name, $surname, $age, $phone, $email, $password) {
         $this->name = $name;
         $this->surname = $surname;
