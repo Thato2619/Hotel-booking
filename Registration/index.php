@@ -14,12 +14,20 @@
             if(isset($_GET['error'])) {?>
             <p class="error"> <?php echo $_GET['error']; ?></p>
             <?php } ?>
+            <label>Name: </label>
+            <input type="name" name="name" placeholder="Name" required> <br>
+            <label>Surname: </label>
+            <input type="surname" name="surname" placeholder="surname" required> <br>
+            <label>Age: </label>
+            <input type="age" name="age" placeholder="age" required> <br>
+            <label>Phone: </label>
+            <input type="phone" name="phone" placeholder="phone" required> <br>
             <label>Email: </label>
-            <input type="email" name="email" placeholder="Email address" required> <br>
+            <input type="email" name="email" placeholder="email" required> <br>
             <label>Password</label>
             <input type="password" name="password" placeholder="Password" required> <br>
 
-            <button type="submit">LOGIN</button>
+            <button type="submit">SIGN IN</button>
     </form>
 </body>
 </html>
