@@ -72,7 +72,7 @@
             <!-- Types of room in the hotel -->
 
             <!-- card of single bedroom -->
-            <div class="row " >
+            <div class="row ">
                 <div class="col-md-4 mb-2">
                     <div class="card">
                         <img src="./Images/single_bedroom.jpeg" class="card-img-top" alt="...">
