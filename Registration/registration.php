@@ -1,75 +1,56 @@
 <?php 
-require_once('./config.php');
-?>
+session_start();
+//connect this page with database page
+include "db_connection.php";
 
+#validate form by if statement
+if(isset($_POST['name']) && isset($_POST['surname'] && isset($_POST['age'] && isset($_POST['phone'] && isset($_POST['email'] && isset($_POST['password'])))))) {
+    
+    function validate($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+}
+#validate values in registration form
+$name = validate($_POST['name']);
+$surname = validate($_POST['surname']);
+$age = validate($_POST['age']);
+$phone = validate($_POST['phone']);
+$email = validate($_POST['email']);
+$password = validate($_POST['password']);
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-</head>
-<body>
-    <?php 
-    #connect this php file to the database
-    require('./Login/db_connection.php');
-    #add the required values into the database
-    if(isset($_REQUEST['Email'])) {
-        $Email = stripslashes($_REQUEST['email']);
-        $Email = mysqli_real_escape_string($con, '$email');
-        $name = mysqli_real_escape_string($con, 'name');
-        $name = stripslashes($_REQUEST['name']);
-        $surname = mysqli_real_escape_string($con, 'surname');
-        $surname = stripslashes($_REQUEST['surname']);
-        $age = mysqli_real_escape_string($con, 'age');
-        $age = stripslashes($_REQUEST['age']);
-        $phone = mysqli_real_escape_string($con, 'phone');
-        $phone = stripslashes($_REQUEST['phone']);
-        $email = mysqli_real_escape_string($con, 'email');
-        $email = stripslashes($_REQUEST['email']);
-        $password = mysqli_real_escape_string($con, 'password');
-        $password = stripslashes($_REQUEST['password']);
-        #insert all the request values in database using query(variable)
-        $query = "INSERT INTO `Registration` (name, surname, age, phone, email, password) VALUES ('name', 'surname', 'age', 'phone', 'email', 'password')";
+if(empty($email)) {
+    header("Location: index.php?erro=User Name is required"); 
+}
+else if(empty($password)) {
+    header("Location: index.php?erro=User Password is required");
+}
 
-        $result = mysqli_query($con, $query);
+$sql = "SELECT * FROM Login WHERE Email= 'email' AND Password='password'";
 
-        if($result) {
-            echo "<div class= 'form'>
-            <h3>You are registered successfully</h3> <br>
-            <p class= 'link'>Click here to <a href= './Login/login.php'>Login</a></p>
-            </div>";
-        }
-        else{
-            echo "<div class= 'form'>
-            <h3>Please fill in the required fields</h3> <br>
-            <p class= 'link'>Click here to <a href= './Registration/registration.php'>Login</a></p>
-            </div>"; 
-        }
-    } else {
-?>
-<form class="form" action="" method="post">
-    <h1>Registration</h1>
-    <label>Name: </label>
-    <input type="name" name="name" placeholder="name" required> <br>
-    <label>Surname: </label>
-    <input type="surname" name="surname" placeholder="surname" required> <br>
-    <label>Age: </label>
-    <input type="age" name="age" placeholder="age" required> <br>
-    <label>Phone: </label>
-    <input type="phone" name="phone" placeholder="phone" required> <br>
-    <label>Email: </label>
-    <input type="email" name="email" placeholder="Email address" required> <br>
-    <label>password: </label>
-    <input type="password" name="password" placeholder="password" required> <br>
+$results = mysqli_query($conn, $sql);
 
-</form>
-<?php
+if(mysqli_num_rows($results) === 1 ) {
+    $row = mysqli_fetch_assoc($results);
+    if($row['Email'] === 'email' && $row['password'] === 'password'){
+        echo "Logged In!!";
+        $_SESSION['Login_id'] = $row['id'];
+        $_SESSION['Email'] = $row['Email'];
+        $_SESSION['Password'] = $row['password'];
+        header("Location: homePage.php");
+        exit();
+    }
+    else{
+        header("Location: registration.php");
+        exit();
     }
 
-    ?>
-</body>
-</html>
- 
+    
+
+}
+else{
+    header("Location: registration.php");
+    exit();
+}
