@@ -10,7 +10,7 @@
 
 <body>
     <section>
-        <form action="login.php" method="post">
+        <form action="/Includes/registration-inc.php" method="post">
             <h1>Registration</h1>
             <label>Name: </label>
             <input type="name" name="name" placeholder="Name" required> <br>
@@ -28,7 +28,7 @@
             <button type="submit">SIGN IN</button>
         </form>
 
-        <form action="login.php" method="post">
+        <form action="/Includes/login-inc.php" method="post">
             <h1>LOGIN</h1>
             <label>Email: </label>
             <input type="email" name="email" placeholder="Email address" required> <br>
