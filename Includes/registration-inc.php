@@ -7,6 +7,9 @@ if(isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $Email = $_POST['email'];
     $passwod = $_POST['password'];
+    
+    //instantiate Registration.php
+    include "../classes/registration.php";
 }
 
 

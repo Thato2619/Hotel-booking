@@ -18,6 +18,10 @@ class Registration{
         $this->email= $email;
         $this->password = $password;
     }
+
+    private function emptyInput() {
+        
+    }
 }
 
 
