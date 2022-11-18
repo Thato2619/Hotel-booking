@@ -11,8 +11,8 @@
     <!--Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- CSS stylesheet-->
-    <link rel="stylesheet" href="styles.css">
+    <!-- CSS stylesheet-
+    <link rel="stylesheet" href="styles.css">-->
 
 </head>
 
@@ -59,7 +59,7 @@
         </blockquote>
         <figcaption class="blockquote-footer">
             <p class="lead">
-                A place where your heart is full and your mind free.
+                A place where your heart is full and your mind is free.
             </p>
         </figcaption>
     </figure>
@@ -94,9 +94,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- card of view_with_view-->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="./Images/room_with_view.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -115,9 +116,10 @@
         <div class="col-md-10">
             <!-- Types of room in the hotel -->
             <div class="row">
+                <!-- card of room of luxury-->
                 <div class="col-md-4  mb-4">
                     <div class="card">
-                        <img src=".." class="card-img-top" alt="...">
+                        <img src="./Images/luxury_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -125,9 +127,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- card of double room -->
                 <div class="col-md-4  mb-4">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="./Images/double_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -135,9 +139,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- card of premium king bedroom -->
                 <div class="col-md-4  mb-4">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="./Images/premium_king_bed.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
