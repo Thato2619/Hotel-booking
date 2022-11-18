@@ -18,15 +18,16 @@ class Registration{
     }
     #create a method for when registration input is left empty
     private function emptyInput() {
-        $results;
-        if(empty($this->$name) || empty($this->$surname) || empty($this->$age) || empty($this->$phone || empty($this->$password) || )) {
-            $results = false;
+        $result = 0;
+        if(empty($this->name) || empty($this->surname) || empty($this->age) || empty($this->phone || empty($this->password || empty($this->email)))) {
+            $result = false;
         }
         else{
             $results = true;
         }
-        return $results;
+        return $result;
     }
+    #create a function to validate invalid email
 }
 
 
