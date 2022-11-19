@@ -5,7 +5,12 @@ require './Config/database.config.php';
 $login = new Login();
 if(isset($_POST['submit'])){
     $result = $login->login($_POST['$Email'] , $_POST['$password']);
-    
+
+    if($result == 1){
+        $_SESSION["login"] = true;
+        $_SESSION["id"] = $login->userId();
+        header(("Location: index.php"));
+    }
 }
 ?>
 
