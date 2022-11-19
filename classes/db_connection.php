@@ -11,6 +11,7 @@ class DbConfig{
     private $host= 'localhost';
     private $port = 8888;
 
+    #create database connection method
     public function connectToDatabase (){
         $mysqli = new mysqli( 
             $this->Name,
@@ -18,10 +19,16 @@ class DbConfig{
             $this->Age,
             $this->Email,
             $this->Password,
+            $this->db_name,
             $this->host,
             $this->port,
         );
 
-        //check connection 
+        # check connection of database
+        if($mysqli -> connect_error) {
+            die("Connection failed:" . $mysqli->connect_error);
+        } else {
+            return $mysqli;
+        }
     }
     }

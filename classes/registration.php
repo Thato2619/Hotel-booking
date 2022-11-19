@@ -24,7 +24,7 @@ class Registration{
             $result = false;
         }
         else{
-            $results = true;
+            $result = true;
         }
         return $result;
     }
