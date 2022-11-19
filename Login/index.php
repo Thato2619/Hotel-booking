@@ -3,7 +3,10 @@ require './Config/database.config.php';
 
 //create login using class name from database.config.php
 $login = new Login();
-
+if(isset($_POST['submit'])){
+    $result = $login->login($_POST['$Email'] , $_POST['$password']);
+    
+}
 ?>
 
 
