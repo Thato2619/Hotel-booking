@@ -38,7 +38,10 @@ class Register extends Connection{
 }
 
 class Login extends Connection{
-    public function
+    public function login($Email, $password) {
+        $result = mysqli_query($this->conn,"SELECT * FROM Users WHERE Email = $Email ");
+        $row = mysqli_fetch_assoc($result);
+    }
 }
 
 
