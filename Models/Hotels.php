@@ -20,8 +20,17 @@ class Hotels {
         $this->totalBookings = $totalBookings;
         $this->rating = $rating;
         $this->stayDays = $stayDays;
-        
     }
+
+    //add methods to needed fields while using constructors
+    public function __toString() {
+        return $this->address . "-". $this->price;
+    }
+
+    public function totalPrice($price) {
+        return $this->price = $this->price * $this->stayDays;
+    }
+
 }
 
 
