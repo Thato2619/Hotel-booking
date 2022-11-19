@@ -60,8 +60,15 @@ class Login extends Connection{
                 // User not registered
             }
         }
+        
+
+    }
+    public function userId(){
+        return $this->id;
     }
 }
+
+
 
 
 ?>
