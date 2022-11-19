@@ -1,6 +1,12 @@
 <?php 
 require './Config/database.config.php';
+$register = new Register();
 
+if(isset($_POST['submit'])){
+    $result = $register->registration($_POST["name"], $_POST["surname"], $_POST["age"], $_POST["phone"], $_POST["Email"], $_POST["password"]);
+}
+
+if
 
 ?>
 
