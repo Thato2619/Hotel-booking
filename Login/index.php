@@ -11,6 +11,14 @@ if(isset($_POST['submit'])){
         $_SESSION["id"] = $login->userId();
         header(("Location: index.php"));
     }
+    elseif($result == 10){
+        echo
+        "<script> alert('Wrong password')</script>";
+    }
+    elseif($result == 100){
+        echo
+        "<script> alert('User not registered')</script>";
+    }
 }
 ?>
 

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+/*session_start();
 //connect this page with database page
 include "db_connection.php";
 
@@ -65,4 +65,4 @@ if(mysqli_num_rows($results) === 1 ) {
 else{
     header("Location: registration.php");
     exit();
-}
+}/
