@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use Connection as GlobalConnection;
+
 session_start();
 
 class Connection{
@@ -34,7 +37,9 @@ class Register extends Connection{
     }
 }
 
-
+class Login extends Connection{
+    public function
+}
 
 
 ?>
