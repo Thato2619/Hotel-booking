@@ -38,9 +38,15 @@ class Register extends Connection{
 }
 
 class Login extends Connection{
+    public $id;
     public function login($Email, $password) {
         $result = mysqli_query($this->conn,"SELECT * FROM Users WHERE Email = $Email ");
         $row = mysqli_fetch_assoc($result);
+        
+        if(mysqli_num_rows($result) > 0){
+            if ($password == $row["password"]){
+            }
+        }
     }
 }
 
