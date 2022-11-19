@@ -1,4 +1,5 @@
 <?php 
+require './Config/database.config.php';
 
 
 ?>
