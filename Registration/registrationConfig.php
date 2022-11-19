@@ -14,5 +14,26 @@ class Connection{
     }
 }
 
+#extend connection to Register class
+class Register extends Connection{
+    public function registration($Name, $Surname, $Age, $phone, $Email, $password){
+        $duplciate = mysqli_query($this->conn, "SELECT * FROM Users WHERE Email = '$Email'");
+        if(mysqli_num_rows($duplciate) > 0 ) {
+            return 10; //email already exists
+        }
+        else{
+            if($password == $password) {
+                $query = "INSERT INTO Users VALUES('', '$Name', '$Surname', '$Age', '$phone', '$Email')";
+                mysqli_query($this->conn , $query);
+                return 1; //registration successful
+            }
+            else{
+                return 100;
+            }
+        }
+    }
+}
+
+
 
 ?>
