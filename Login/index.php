@@ -1,3 +1,14 @@
+<?php 
+require './Config/database.config.php';
+
+//create login using class name from database.config.php
+$login = new Login();
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
