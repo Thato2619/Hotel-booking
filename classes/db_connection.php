@@ -8,6 +8,20 @@ class DbConfig{
     private $Email = 'root';
     private $Password = '';
     private $db_name = 'Users';
+    private $host= 'localhost';
+    private $port = 8888;
 
-    public function
+    public function connectToDatabase (){
+        $mysqli = new mysqli( 
+            $this->Name,
+            $this->Surname,
+            $this->Age,
+            $this->Email,
+            $this->Password,
+            $this->host,
+            $this->port,
+        );
+
+        //check connection 
+    }
     }
