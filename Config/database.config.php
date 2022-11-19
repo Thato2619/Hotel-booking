@@ -45,6 +45,19 @@ class Login extends Connection{
         
         if(mysqli_num_rows($result) > 0){
             if ($password == $row["password"]){
+                if($password == $row["password"]){
+                    $this->id = $row["id"];
+                    return 1;
+                    //when returns 1 == Login successfully
+                }
+                else{
+                    return 10;
+                    //wrong password
+                }
+            }
+            else{
+                return 100;
+                // User not registered
             }
         }
     }
