@@ -6,7 +6,19 @@ if(isset($_POST['submit'])){
     $result = $register->registration($_POST["name"], $_POST["surname"], $_POST["age"], $_POST["phone"], $_POST["Email"], $_POST["password"]);
 }
 
-if
+if($result == 1){
+    echo 
+    "<script>alert('Sucessfully registered!');</script>";
+}
+elseif($result == 10){
+    echo 
+    "<script>alert('Email already taken')</script>";
+}
+elseif($result == 1){
+    echo 
+    "<script>alert('Password ')</script>";
+}
+
 
 ?>
 
