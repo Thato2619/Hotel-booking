@@ -31,7 +31,93 @@ class Hotels {
         return $this->price = $this->price * $this->stayDays;
     }
 
+    //getters and setters
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setID($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function price()
+    {
+        return $this->price;
+    }
+
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getAvailableRooms()
+    {
+        return $this->availableRooms;
+    }
+
+    public function setAvailableRooms($availableRooms)
+    {
+        $this->availableRooms = $availableRooms;
+
+        return $this;
+    }
+    public function getTotalBookings()
+    {
+        return $this->totalBookings;
+    }
+
+    public function setTotalBookings($totalBookings)
+    {
+        $this->totalBooking = $totalBookings;
+
+        return $this;
+    }
+    public function getRating()
+    {
+        return $this->totalRating;
+    }
+
+    public function setRating($rating)
+    {
+        $this->rating = $rating;
+
+        return $this;
+    }
+    public function getStayDays()
+    {
+        return $this->stayDays;
+    }
+
+    public function setStayDays($stayDays)
+    {
+        $this->stayDays = $stayDays;
+
+        return $this;
+    }
+
+    
+
 }
+
+
 
 
 
