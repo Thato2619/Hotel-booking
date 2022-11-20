@@ -10,7 +10,19 @@ class Users{
     private $password;
     private $role;
 
-    
+    //constructor
+    public function __construct($id, $fullName, $age, $phone, $email, $password, $role)
+    {
+        $this->$fullName;
+        $this->age;
+        $this->phone;
+        $this->email;
+        $this->password;
+        $this->role;
+
+        $this->$id = $this->generatorId()
+
+    }
 }
 
 
