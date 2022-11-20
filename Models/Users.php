@@ -13,12 +13,12 @@ class Users{
     //constructor
     public function __construct($id, $fullName, $age, $phone, $email, $password, $role)
     {
-        $this->$fullName;
-        $this->age;
-        $this->phone;
-        $this->email;
-        $this->password;
-        $this->role;
+        $this->fullName = $fullName;
+        $this->age = $age;
+        $this->phone = $phone;
+        $this->email = $email;
+        $this->password = $password;
+        $this->role = $role;
 
         $this->$id = $this->generateId(); #create private function to randomize id number
     }
