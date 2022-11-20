@@ -20,7 +20,25 @@ class Users{
         $this->password;
         $this->role;
 
-        $this->$id = $this->generatorId()
+        $this->$id = $this->generatorId(); #create private function to randomize id number
+    }
+
+    //add methods to the id value
+    private function generateId() {
+        $randomNum = rand(10000, 60000);
+        $id = md5($randomNum);
+
+        switch ($this->role) {
+            case 'staff':
+                $staffId = "staff";
+                return $staffId . $id;
+                break;
+
+            default:
+            $customerId = "customer";
+            return $customerId . $id;
+            break;
+        }   
 
     }
 }
