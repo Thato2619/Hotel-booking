@@ -1,28 +1,30 @@
-<?php 
+<?php
 
 require_once __DIR__ . "/Users.php";
 
 //class to create user in database
-class New_Customer{
+class New_Customer
+{
     //create user via database
-    public function createUser($DBConfig, $Users) {
+    public function createUser($DBConfig, $Users)
+    {
         $connection = $DBConfig->connectToDatabase();
 
         //SQL statement to create or insert new user
         $statement = "INSERT INTO Users (Customer_id, Full_Name, Age, Phone, Email, Password, Staff_id, Role)" .
-        "VALUES ('".$Users->getId()."','".$Users->getFullName()."','".$Users->getAge()."','".$Users->getPhone()."','".$Users->getPassword()."','".$Users->getEmail()."','".$Users->getRole()."')";
+            "VALUES ('" . $Users->getId() . "','" . $Users->getFullName() . "','" . $Users->getAge() . "','" . $Users->getPhone() . "','" . $Users->getPassword() . "','" . $Users->getEmail() . "','" . $Users->getRole() . "')";
 
         //send in request
-        if($result = $connection ->query($statement)) {
+        if ($result = $connection->query($statement)) {
             return $result; //returns result whether its true or false
             $connection->close();
-        }
-        else{
+        } else {
             die("connection failed" . $connection->error);
         }
     }
     //Enables to read by ID
-    public function readId($DBConfig, $UsersId) {
+    public function readId($DBConfig, $UsersId)
+    {
         //Connect to database
         $connection = $DBConfig->connectToDatabase();
         //place a sql statement
@@ -30,11 +32,25 @@ class New_Customer{
         if ($result = $connection->query($statement)) {
             //get single result (only one)
             $row = $result->fetch_object(); //returns PHP object
-        } if ($row!==null) {
-
-            usersObject = new Users(
-                $row->full
-            )
         }
+        if ($row !== null) {
+            //call parse if object, if not return nothing
+            $usersObject = new Users(
+                $row->id,
+                $row->fullname,
+                $row->age,
+                $row->phone,
+                $row->email,
+                $row->password,
+                $row->row,
+            );
+
+            $usersObject->setId($row->id);
+            return $usersObject;
+        } else {
+            echo $connection->error;
+            die("Connect failed: " . $connection->connect_error);
+        }
+        $connection->close();
     }
 }
