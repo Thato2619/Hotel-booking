@@ -53,6 +53,18 @@ class Users{
         return $this;
     }
 
+    function getFullName()
+    {
+        return $this->fullName;
+    }
+    public function setFullName($fullName)
+    {
+        $this->fullName = $fullName;
+
+        return $this;
+    }
+
+    
     function getPassword()
     {
         return $this->password;
