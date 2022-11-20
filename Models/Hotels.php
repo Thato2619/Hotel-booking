@@ -56,7 +56,7 @@ class Hotels {
         return $this;
     }
 
-    public function price()
+    public function getPrice()
     {
         return $this->price;
     }

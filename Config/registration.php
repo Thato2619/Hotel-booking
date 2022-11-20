@@ -4,7 +4,7 @@ class Registration{
     private $name;
     private $surname;
     private $age;
-    private $phone;
+    /*private $phone;
     private $email;
     private $password;
 
@@ -28,7 +28,7 @@ class Registration{
         }
         return $result;
     }
-    #create a function to validate invalid email
+    #create a function to validate invalid email*/
 }
 
 

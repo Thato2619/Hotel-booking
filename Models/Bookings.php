@@ -21,11 +21,9 @@ class Bookings extends Hotels{
         $this->checkInDate = $checkInDate;
         $this->checkOutDate = $checkOutDate;
         $this-> totalCost = $totalCost;
-
-        //booking methods when user bookes 
-        
     }
 
+    
 
 }
 
