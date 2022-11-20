@@ -10,6 +10,23 @@ class Bookings extends Hotels{
     private $checkOutDate;
     private $totalCost;
 
+    public function __construct($id, $hotelName, $customerEmail, $phoneNumber, $hotelId, $customerId, $checkInDate, $checkOutDate, $totalCost)
+    {
+        $this->id = $id;
+        $this->hotelName = $hotelName;
+        $this->customerEmail = $customerEmail;
+        $this->phoneNumber = $phoneNumber;
+        $this->hotelId = $hotelId;
+        $this->customerId = $customerId;
+        $this->checkInDate = $checkInDate;
+        $this->checkOutDate = $checkOutDate;
+        $this-> totalCost = $totalCost;
+
+        //booking methods when user bookes 
+        
+    }
+
+
 }
 
 
