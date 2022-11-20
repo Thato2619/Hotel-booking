@@ -1,5 +1,5 @@
 <?php 
-class Bookings{
+class Bookings extends Hotels{
     private $id;
     private $hotelName;
     private $customerEmail;
