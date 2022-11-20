@@ -20,7 +20,7 @@ class Users{
         $this->password;
         $this->role;
 
-        $this->$id = $this->generatorId(); #create private function to randomize id number
+        $this->$id = $this->generateId(); #create private function to randomize id number
     }
 
     //add methods to the id value
@@ -40,6 +40,52 @@ class Users{
             break;
         }   
 
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    function getPassword()
+    {
+        return $this->password;
+    }
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+
+    public function getRole()
+    {
+        return $this->role;
+    }
+    public function setRole($role)
+    {
+        $this->role = $role;
+
+        return $this;
     }
 }
 
