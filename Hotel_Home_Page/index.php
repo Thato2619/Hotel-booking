@@ -96,7 +96,7 @@
                         <div class="card">
                             <img src="./Images/deluxe_room.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Deluxe</h5>
+                                <h5 class="card-title">Deluxe Bedroom</h5>
                                 <h6>Amenities</h6>
                                 <ul>
                                     <li>Free Wifi</li>
@@ -147,7 +147,7 @@
                     <div class="card">
                         <img src="./Images/luxury_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Luxurious Room</h5>
+                            <h5 class="card-title">Luxurious Bedroom</h5>
                             <h6>Amenities</h6>
                                 <ul>
                                     <li>Fast Wifi</li>
@@ -191,7 +191,7 @@
                     <div class="card">
                         <img src="./Images/premium_king_bed.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Premimum</h5>
+                            <h5 class="card-title">Premimum Bedroom</h5>
                             <h6>Amenities</h6>
                                 <ul>
                                     <li>Fast Wifi</li>
