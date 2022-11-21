@@ -77,40 +77,63 @@
                     <div class="card">
                         <img src="./Images/single_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-success">Reserve</a>
-                            <a href="#" class="btn btn-warning">View More</a>
+                            <h5 class="card-title">Standard Bedroom</h5>
+                            <h6>Amenities</h6>
+                            <ul>
+                                <li>Free Wifi</li>
+                                <li>Heart of the city</li>
+                                <li>Premimum coffee</li>
+                                <li>Easy transporation</li>
+                                <li>min = 1, max = 2</li>
+                            </ul>
+                                <p class="card-text">This is one of our best seller due to the price that accomdatess anyone that wants to take a break.</p>
+                                <a href="#bookings" class="btn btn-success">R500 per night</a>
+                                < </div>
                         </div>
                     </div>
-                </div>
-                <!-- card of deluxe bedroom -->
-                <div class="col-md-4  mb-4">
-                    <div class="card">
-                        <img src="./Images/deluxe_room.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-success">Reserve</a>
-                            <a href="#" class="btn btn-warning">View More</a>
+                    <!-- card of deluxe bedroom -->
+                    <div class="col-md-4  mb-4">
+                        <div class="card">
+                            <img src="./Images/deluxe_room.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Deluxe</h5>
+                                <h6>Amenities</h6>
+                                <ul>
+                                    <li>Free Wifi</li>
+                                    <li>Beautiful View</li>
+                                    <li>Airport Transfer</li>
+                                    <li>Renatl cars</li>
+                                    <li>min = 3, max = 4</li>
+                                </ul>
+                                    <p> class="card-text">Welcome to the Deluxe experience. Where quality and comfort are the forefront to rest fun and rest.</p>
+                                    <a href="#bookings" class="btn btn-success">R850 per night</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- card of view_with_view-->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./Images/room_with_view.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-success">Reserve</a>
-                            <a href="#" class="btn btn-warning">View More</a>
+                    <!-- card of view_with_view-->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="./Images/room_with_view.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Room-with-view</h5>
+                                <h6>Amenities</h6>
+                                <ul>
+                                    <li>Free Wifi</li>
+                                    <li>outstanding scenic view</li>
+                                    <li>safe area</li>
+                                    <li>Rental cars</li>
+                                    <li>free toiletries and bath robes</li>
+                                    <li>min = 2, max = 4</li>
+                                </ul>
+                                <p class="card-text">If you thought paradise was fake, then you have not seen this beautiful scenic place. There is a right balance of night life and day life. surrounded by scenic  views</p>
+                                <a href="#bookings" class="btn btn-success">R1350 per night</a>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
     </div>
@@ -124,10 +147,19 @@
                     <div class="card">
                         <img src="./Images/luxury_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-success">Reserve</a>
-                            <a href="#" class="btn btn-warning">View More</a>
+                            <h5 class="card-title">Luxurious Room</h5>
+                            <h6>Amenities</h6>
+                                <ul>
+                                    <li>Fast Wifi</li>
+                                    <li>High ceiling</li>
+                                    <li>Airport Transfer</li>
+                                    <li>Air Conditioning</li>
+                                    <li>Golf course</li>
+                                    <li>Private</li>
+                                    <li>min = 2, max = 5<li>
+                                </ul>
+                            <p class="card-text">This room is private and huge. It leaves you wanting more and more. Surrounded by unlimited room service.</p>
+                            <a href="#" class="btn btn-success">R3500 per night</a>
                         </div>
                     </div>
                 </div>
@@ -137,10 +169,19 @@
                     <div class="card">
                         <img src="./Images/double_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-success">Reserve</a>
-                            <a href="#" class="btn btn-warning">View More</a>
+                            <h5 class="card-title">Double Bedroom</h5>
+                           <h6>Amenities</h6>
+                                <ul>
+                                    <li>Fast Wifi</li>
+                                    <li>High ceiling</li>
+                                    <li>Airport Transfer</li>
+                                    <li>Air Conditioning</li>
+                                    <li>Complimentary breakfast</li>
+                                    <li>close to amusement parks & theme parks</li>
+                                    <li>min = 2, max = 5<li>
+                                </ul>
+                            <p class="card-text">This room is catered to all families. This place literally specialises in family bonding time</p>
+                            <a href="#" class="btn btn-success">R2500 per night</a>
                         </div>
                     </div>
                 </div>
@@ -150,10 +191,23 @@
                     <div class="card">
                         <img src="./Images/premium_king_bed.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-success">Reserve</a>
-                            <a href="#" class="btn btn-warning">View More</a>
+                            <h5 class="card-title">Premimum</h5>
+                            <h6>Amenities</h6>
+                                <ul>
+                                    <li>Fast Wifi</li>
+                                    <li>High ceiling</li>
+                                    <li>Airport Transfer</li>
+                                    <li>Air Conditioning</li>
+                                    <li>Complimentary breakfast</li>
+                                    <li>close to amusement parks & theme parks</li>
+                                    <li>24hr personal room service</li>
+                                    <li>Golf Course</li>
+                                    <li>A personal valet</li>
+                                    <li>The most scenic view of all time</li>
+                                    <li>min = 2, max = 7<li>
+                                </ul>
+                            <p class="card-text">The most wanted room in our property due to the privacy. A great area for friendship gathering, maybe small weddings and family gatherings. You will be accommdated</p>
+                            <a href="#" class="btn btn-success">R5000 per night</a>
                         </div>
                     </div>
                 </div>
