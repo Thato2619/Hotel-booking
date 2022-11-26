@@ -1,6 +1,5 @@
 <?php 
 
-
 require './Config/database.config.php';
 include './Hotel_Home_Page/index.php';
 

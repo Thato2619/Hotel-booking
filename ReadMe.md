@@ -1,6 +1,7 @@
 # Hotel Booking App
 
-# This is code has been inspired by 2022-06 repository folder and videos and documetations. Please see the bibliography below
+# This is code has been inspired by 2022-06 repository folder, videos and documetation. Please see the bibliography below:
+## "Adams, D. (2021) Hotel Reservation form with php, CodeShack. CodeShack. Available at: https://codeshack.io/hotel-reservation-form-php/ (Accessed: November 19, 2022). "
 
 ## There are seven types of folder in this folder
 1. config : contains everything from the database

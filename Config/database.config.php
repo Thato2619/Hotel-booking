@@ -1,13 +1,13 @@
 <?php
 
-use Connection as GlobalConnection;
+#use Connection as GlobalConnection;
 
 session_start();
 
 class Connection{
     public $host = "localhost";
     public $user = "root";
-    public $password = "";
+    public $password = "root";
     public $db_name = "Users";
     public $conn;
 
