@@ -65,4 +65,4 @@ if(mysqli_num_rows($results) === 1 ) {
 else{
     header("Location: registration.php");
     exit();
-}/
+}*/

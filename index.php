@@ -1,3 +1,44 @@
+
+
+<?php
+session_start();
+require_once ("./Config/db_connection.php");
+require ('./Registration/index.php');
+include_once ("./Login/index.php");
+
+
+$register = new Register();
+if(isset($_POST['Sign In'])){
+    $outcome = $register->register($_POST['Full_Name'] , $_POST['Age'] , $_POST['Phone'], $_POST['Email'], $_POST['Password'], $_POST['Staff_Id'], $_POST['Role']);
+
+    if($outcome === 1){
+        
+    }
+}
+//create login using class name from database.config.php
+$login = new Login();
+if(isset($_POST['Login'])){
+    $result = $login->login($_POST['$Email'] , $_POST['$password']);
+
+    if($result === 1){
+        $_SESSION["login"] = true;
+        $_SESSION["id"] = $login->Customer_Id();
+        header(("Location: index.php"));
+    }
+    elseif($result === 10){
+        echo
+        "<script> alert('Wrong password')</script>";
+    }
+    elseif($result === 100){
+        echo
+        "<script> alert('User not registered')</script>";
+    }
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,7 +116,7 @@
             <div class="row ">
                 <div class="col-md-4 mb-2">
                     <div class="card">
-                        <img src="./Images/single_bedroom.jpeg" class="card-img-top" alt="...">
+                        <img src="./Hotel_Home_Page/Images/single_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Standard Bedroom</h5>
                             <h6>Amenities</h6>
@@ -94,7 +135,7 @@
                     <!-- card of deluxe bedroom -->
                     <div class="col-md-4  mb-4">
                         <div class="card">
-                            <img src="./Images/deluxe_room.jpeg" class="card-img-top" alt="...">
+                            <img src="./Hotel_Home_Page/Images/deluxe_room.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Deluxe Bedroom</h5>
                                 <h6>Amenities</h6>
@@ -113,7 +154,7 @@
                     <!-- card of view_with_view-->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img src="./Images/room_with_view.jpeg" class="card-img-top" alt="...">
+                            <img src="./Hotel_Home_Page/Images/room_with_view.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Room-with-view</h5>
                                 <h6>Amenities</h6>
@@ -145,7 +186,7 @@
                 <!-- card of room of luxury-->
                 <div class="col-md-4  mb-4">
                     <div class="card">
-                        <img src="./Images/luxury_bedroom.jpeg" class="card-img-top" alt="...">
+                        <img src="./Hotel_Home_Page/Images/luxury_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Luxurious Bedroom</h5>
                             <h6>Amenities</h6>
@@ -167,7 +208,7 @@
                 <!-- card of double room -->
                 <div class="col-md-4  mb-4">
                     <div class="card">
-                        <img src="./Images/double_bedroom.jpeg" class="card-img-top" alt="...">
+                        <img src="./Hotel_Home_Page/Images/double_bedroom.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Double Bedroom</h5>
                            <h6>Amenities</h6>
@@ -189,7 +230,7 @@
                 <!-- card of premium king bedroom -->
                 <div class="col-md-4  mb-4">
                     <div class="card">
-                        <img src="./Images/premium_king_bed.jpeg" class="card-img-top" alt="...">
+                        <img src="./Hotel_Home_Page/Images/premium_king_bed.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Premimum Bedroom</h5>
                             <h6>Amenities</h6>

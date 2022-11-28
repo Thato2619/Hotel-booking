@@ -1,5 +1,8 @@
 <?php 
+
+session_start();
 require './Config/database.config.php';
+#require './Login/login.php';
 
 //create login using class name from database.config.php
 $login = new Login();
@@ -37,8 +40,8 @@ if(isset($_POST['submit'])){
 
 <body>
     <section>
-        <form action="/Includes/registration-inc.php" method="post">
-            <h1>Registration</h1>
+        <form action="" method="post">
+            <h1>REGISTRATION</h1>
             <label>Name: </label>
             <input type="name" name="name" placeholder="Name" required> <br>
             <label>Surname: </label>
@@ -55,7 +58,7 @@ if(isset($_POST['submit'])){
             <button type="submit">SIGN IN</button>
         </form>
 
-        <form action="/Includes/login-inc.php" method="post">
+        <form action="" method="post">
             <h1>LOGIN</h1>
             <label>Email: </label>
             <input type="email" name="email" placeholder="Email address" required> <br>
@@ -78,6 +81,6 @@ if(isset($_POST['submit'])){
  * <!-- add error message in php tags <?php if (isset($_GET['error'])) { ?> 
  * <p class="error"> <?php echo $_GET['error']; ?></p>
  * <?php } ?>-->
- */
+ 
            
 

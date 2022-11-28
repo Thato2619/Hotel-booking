@@ -1,7 +1,7 @@
 <?php 
-/*session_start();
+session_start();
 //connect this page with database page
-include "db_connection.php";
+include "./Config/database.config.php";
 
 #validate form by if statement
 if(isset($_POST['email']) && isset($_POST['password'])) {
@@ -48,5 +48,5 @@ if(mysqli_num_rows($results) === 1 ) {
 }
 else{
     header("Location: registration.php");
-    exit();/
+    exit();
 }

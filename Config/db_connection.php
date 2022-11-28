@@ -4,7 +4,7 @@ session_start();
 class DbConfig{
     private $fullName = 'root';
     private $password = 'root';
-    private $usersDb = 'Hotel Booking';
+    private $usersDb = 'Hotel-booking';
     private $host= 'localhost';
     private $port = 8888;
 
